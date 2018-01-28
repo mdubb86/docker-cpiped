@@ -2,6 +2,7 @@ FROM debian:jessie
 
 ENV DEVICE PIPE
 
+# Install cpiped, note the sed command replaces the sample rate in cpiped to match snapcast
 RUN apt-get update && apt-get install -y \
   build-essential \
   git \
@@ -9,6 +10,7 @@ RUN apt-get update && apt-get install -y \
   alsa-utils && \
   git clone https://github.com/b-fitzpatrick/cpiped.git && \
   cd cpiped && \
+  sed -i 's/44100/48000/' cpiped.c && \
   make
 
 # Set the entry point
