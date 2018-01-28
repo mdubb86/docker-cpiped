@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv /bin/bash
+echo "Starting cpiped ${DEVICE} > ${PIPE}"
+exec /cpiped/cpiped -d ${DEVICE} ${PIPE}
+
