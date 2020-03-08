@@ -1,7 +1,5 @@
 FROM debian:jessie
 
-ENV DEVICE PIPE
-
 # Install cpiped, note the sed command replaces the sample rate in cpiped to match snapcast
 RUN apt-get update && apt-get install -y \
   build-essential \

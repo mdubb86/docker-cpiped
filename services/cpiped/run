@@ -1,4 +1,5 @@
 #!/usr/bin/with-contenv /bin/bash
-echo "Starting cpiped ${DEVICE} > ${PIPE}"
-exec /cpiped/cpiped -d ${DEVICE} ${PIPE}
+source /root/dynamic.env
+echo "Starting cpiped ${HW_ADDRESS} > ${PIPE}"
+exec /cpiped/cpiped -d ${HW_ADDRESS} ${PIPE}
 
