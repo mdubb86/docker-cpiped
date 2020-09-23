@@ -5,7 +5,10 @@ RUN apt-get update && apt-get install -y \
   build-essential \
   git \
   libasound2-dev \
-  alsa-utils && \
+  alsa-utils \
+  curl \
+  wget \
+  jq && \
   git clone https://github.com/b-fitzpatrick/cpiped.git && \
   cd cpiped && \
   sed -i 's/44100/48000/' cpiped.c && \

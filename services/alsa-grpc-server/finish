@@ -1,0 +1,2 @@
+#!/bin/bash
+echo 'alsa-grpc-server exited'

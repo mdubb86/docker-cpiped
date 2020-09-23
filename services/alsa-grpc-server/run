@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv /bin/bash
+echo "Starting alsa_grpc-server for card $CARD, control $CONTROL"
+exec /alsa-grpc-server "$CARD" "$CONTROL"
+
+
